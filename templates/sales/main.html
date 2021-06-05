@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block title %}
+sales list
+{% endblock title %}
+
+{% block content %}
+
+{% for obj in object_list %}
+<div class="card mb-3">
+    <a href="{% url 'sales:detail' obj.pk %}"class="card-body"> Transaction id: {{ obj.transaction_id }}</a>
+<!--
+    Another way to do this work...
+    <a href="{{ obj.get_absolute_url }}"class="card-body"> Transaction id: {{ obj.transaction_id }}</a>
+-->
+
+</div>
+
+{% endfor %}
+{% endblock content %}
+
+

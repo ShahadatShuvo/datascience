@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block title %}
+{{ object.transaction_id }}
+{% endblock title %}
+
+
+{% block content %}
+Transaction id: {{ object.transaction_id }};
+<br>
+Customer name: {{ object.customer }};
+Total price: {{ object.total_price }}
+{% endblock content %}
