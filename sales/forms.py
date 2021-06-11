@@ -8,6 +8,6 @@ CHART_CHOICES = (
 
 
 class SalesSearchForm(forms.Form):
-    date_from = forms.DateTimeField(widget=forms.DateTimeInput(attrs={'type': 'date'}))
-    date_to = forms.DateTimeField(widget=forms.DateTimeInput(attrs={'type': 'date'}))
+    date_from = forms.DateField(widget=forms.DateTimeInput(attrs={'type': 'date'}))
+    date_to = forms.DateField(widget=forms.DateTimeInput(attrs={'type': 'date'}))
     chart_type = forms.ChoiceField(choices=CHART_CHOICES)
